@@ -14,9 +14,9 @@ function gravField(x, y){
         ellipse(0,0, 10,10);
         fill(0, map(this.pull, 0.4, 3, 50, 150 ),0, 100);
         ellipse(0,0, this.pullRadius*2);
-        stroke(255);
-        textSize(12);
-        text(this.pull, 22, -22);
+        // stroke(255);
+        // textSize(12);
+        // text(this.pull, 22, -22);
         pop();
     }
 }
