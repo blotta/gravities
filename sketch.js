@@ -55,7 +55,6 @@ function draw() {
     }
 
     getInput();
-    ship.forces.push(gravity);
 
     ship.update();
     ship.display();

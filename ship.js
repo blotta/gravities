@@ -28,10 +28,13 @@ function Ship(){
             fSum.add(this.forces.pop())
         }
         this.accel.add(fSum);
-        console.log(this.accel.mag());
+        //console.log(this.accel.mag());
     }
 
     this.update = function(){
+
+        ship.forces.push(gravity);
+
         this.checkGravField();
 
         this.applyForce();
@@ -59,7 +62,7 @@ function Ship(){
             var distance = gf_v.mag();
             if(distance < gFields[i].pullRadius){
                 var relPull = map(distance, 0, gFields[i].pullRadius, gFields[i].pull, 0)
-                this.forces.push(gf_v.normalize().mult(relPull));
+                this.forces.push(gf_v.normalize().mult(relPull).mult(gFields[i].pullDir));
                 //console.log('Pulling! '+gf_v.mag());
             }
         }
