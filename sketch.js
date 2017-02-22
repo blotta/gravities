@@ -32,7 +32,23 @@ function getInput(){
     if(keyIsDown(LEFT_ARROW) || keyIsDown(65)){
         ship.rotateLeft();
     }
+}
 
+function keyPressed(){
+    if(keyCode === 82){ //'r'
+        //reset fields
+        while(gFields.length){
+            gFields.pop();
+        }
+    }
+
+    if(keyCode === 85){ //'u'
+
+        gFields.pop();
+
+    }
+
+    return false;
 }
 
 function mouseClicked(){

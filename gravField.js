@@ -17,7 +17,7 @@ function gravField(x, y){
         if(this.pullDir == 1){
             fill(0, map(this.pull, 0.4, 3, 50, 150 ),0, 100);
         }else {
-            fill(map(this.pull, 0.4, 3, 50, 150 ), 0, 0, 100);            
+            fill(map(this.pull, 0.4, 3, 50, 150 ), 0, 0, 100);
         }
         ellipse(0,0, this.pullRadius*2);
         // stroke(255);
